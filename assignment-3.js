@@ -1,5 +1,19 @@
 // https://github.com/nozibuddowla/assignment_3.git
 
+// conversion of kilometer to meter
+function kilometerToMeter(num){
+    if(num == null){
+        return "data can not be empty";
+    }
+    if(num < 0 || typeof(num) != "number"){
+        return "invalid parameter";
+    }
+    var meter = 1000 * num;
+    return meter;
+}
+var meterResult = kilometerToMeter(1057);
+console.log(meterResult);
+
 // budge calculator
 function budgetCalculator(numberOfWatchesBuying, numberOfPhonesBuying, numberOfLaptopsBuying){
     if (numberOfWatchesBuying == null || numberOfPhonesBuying == null || numberOfLaptopsBuying == null){
