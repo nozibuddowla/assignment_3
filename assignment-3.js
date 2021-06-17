@@ -1,5 +1,25 @@
 // https://github.com/nozibuddowla/assignment_3.git
 
+// budge calculator
+function budgetCalculator(numberOfWatchesBuying, numberOfPhonesBuying, numberOfLaptopsBuying){
+    if (numberOfWatchesBuying == null || numberOfPhonesBuying == null || numberOfLaptopsBuying == null){
+        return("data are empty");
+    }
+    if (numberOfWatchesBuying < 0 || numberOfPhonesBuying < 0 || numberOfLaptopsBuying < 0){
+        return("value should be positive integer");
+    }
+
+    const watchPrice = 50;
+    const phonePrice = 100;
+    const laptopPrice = 500;
+
+    var budget = (watchPrice * numberOfWatchesBuying) + (phonePrice * numberOfPhonesBuying) + (laptopPrice * numberOfLaptopsBuying);
+    return budget;
+}
+
+var budgetResult = budgetCalculator(0, 1, 0);
+console.log(budgetResult);
+
 // give a hotelcost
 function hotelCost(days){
     if(days <= 0){
@@ -51,5 +71,6 @@ function megaFriend(names){
         return maxLengthsName;
     }
 }
+
 var megaResult = megaFriend(['glenn', 'maggie', 'tara', 't-dog', 'lori', 'hershel', 'beth', 'bob', 'rick', 'carol', 'carl']);
 console.log(megaResult);
